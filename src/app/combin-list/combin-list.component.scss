@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+}
+table {
+    width: 100%;
+}
+mat-paginator {
+    flex: 0;
+}
