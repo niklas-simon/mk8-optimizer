@@ -1,35 +1,38 @@
 <div class="table-container">
     <table mat-table [dataSource]="tableData">
         <ng-container matColumnDef="selected">
-            <th mat-header-cell *matHeaderCellDef>Show Stats</th>
+            <th mat-header-cell *matHeaderCellDef>Compare&nbsp;</th>
             <td mat-cell *matCellDef="let e">
-                <mat-checkbox [checked]="e.selected" (change)="e.selected = !e.selected; changeSelection()"></mat-checkbox>
+                <div class="compare-container">
+                    <mat-icon [style.color]="e.color" *ngIf="e.color">show_chart</mat-icon>
+                    <mat-checkbox [checked]="e.color" (change)="changeSelection(e)" style="margin-right: .5em;"></mat-checkbox>
+                </div>
             </td>
         </ng-container>
         <ng-container matColumnDef="score">
-            <th mat-header-cell *matHeaderCellDef>Score</th>
-            <td mat-cell *matCellDef="let e">{{e.score | number:"1.2-2"}}</td>
+            <th mat-header-cell *matHeaderCellDef>Score&nbsp;</th>
+            <td mat-cell *matCellDef="let e">{{e.score | number:"1.1-2"}}</td>
         </ng-container>
         <ng-container matColumnDef="driver">
-            <th mat-header-cell *matHeaderCellDef>Driver</th>
+            <th mat-header-cell *matHeaderCellDef>Driver&nbsp;</th>
             <td mat-cell *matCellDef="let e">
                 <app-part [part]="e.driver"></app-part>
             </td>
         </ng-container>
         <ng-container matColumnDef="body">
-            <th mat-header-cell *matHeaderCellDef>Body</th>
+            <th mat-header-cell *matHeaderCellDef>Body&nbsp;</th>
             <td mat-cell *matCellDef="let e">
                 <app-part [part]="e.body"></app-part>
             </td>
         </ng-container>
         <ng-container matColumnDef="tire">
-            <th mat-header-cell *matHeaderCellDef>Tires</th>
+            <th mat-header-cell *matHeaderCellDef>Tires&nbsp;</th>
             <td mat-cell *matCellDef="let e">
                 <app-part [part]="e.tire"></app-part>
             </td>
         </ng-container>
         <ng-container matColumnDef="glider">
-            <th mat-header-cell *matHeaderCellDef>Glider</th>
+            <th mat-header-cell *matHeaderCellDef>Glider&nbsp;</th>
             <td mat-cell *matCellDef="let e">
                 <app-part [part]="e.glider"></app-part>
             </td>

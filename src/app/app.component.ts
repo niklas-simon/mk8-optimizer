@@ -10,7 +10,7 @@ import { SettingsService } from './settings.service';
 export class AppComponent implements OnInit {
     selection: Combination[] = [];
 
-    constructor(private statsService: StatsService, private settingsService: SettingsService) {}
+    constructor() {}
 
     ngOnInit(): void {}
 }

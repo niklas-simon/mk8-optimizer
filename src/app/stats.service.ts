@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SettingsService } from './settings.service';
+import { ReplaySubject } from 'rxjs';
 
 export interface Part {
     names: string[],
@@ -34,7 +35,7 @@ export interface Combination {
     tg: number,
     iv: number,
     score?: number,
-    selected?: boolean
+    color?: string,
 }
 
 export interface Stat {
@@ -133,30 +134,42 @@ const COMBINS = require('../assets/combinations.json') as Combination[];
     providedIn: 'root'
 })
 export class StatsService {
+    combins: Combination[] = [];
 
-    constructor(private settingsService: SettingsService) { }
+    subject = new ReplaySubject<Combination[]>(1);
 
-    get(): Combination[] {
-        const settings = this.settingsService.get();
-        const combins = COMBINS
-            .filter(combin => !settings.driver_classes.length || settings.driver_classes.includes(combin.driver.class))
-            .filter(combin => !settings.body_classes.length || settings.body_classes.find(c => combin.body.classes.includes(c)))
-            .filter(combin => !settings.drivers.length || settings.drivers.find(d => combin.driver.names[0] === d.names[0]))
-            .filter(combin => !settings.bodies.length || settings.bodies.find(d => combin.body.names[0] === d.names[0]))
-            .filter(combin => !settings.tires.length || settings.tires.find(d => combin.tire.names[0] === d.names[0]))
-            .filter(combin => !settings.gliders.length || settings.gliders.find(d => combin.glider.names[0] === d.names[0]))
-            .map(combin => {
-                let score = 0;
-                settings.priority.forEach((stat, i) => {
-                    //score += (combin as any)[stat.key] / Math.pow(Math.E, settings.weight * i);
-                    //score += (combin as any)[stat.key] / Math.log(settings.weight * i + Math.E / 2);
-                    score += (combin as any)[stat.key] * Math.pow(settings.weight, -i);
-                }, 0);
-                combin.score = score;
-                combin.selected = false;
-                return combin;
-            })
-            .sort((a, b) => (b.score || 0) - (a.score || 0));
-        return combins;
+    constructor(private settingsService: SettingsService) {
+        this.settingsService.getSubject().subscribe(settings => {
+            this.combins = COMBINS
+                .map(combin => {
+                    let score = 0;
+                    settings.priority.forEach((stat, i) => {
+                        //score += (combin as any)[stat.key] / Math.pow(Math.E, settings.weight * i);
+                        //score += (combin as any)[stat.key] / Math.log(settings.weight * i + Math.E / 2);
+                        score += (combin as any)[stat.key] * Math.pow(settings.weight, -i);
+                    }, 0);
+                    combin.score = score;
+                    combin.color = undefined;
+                    return combin;
+                })
+                .sort((a, b) => (b.score || 0) - (a.score || 0));
+            const max = this.combins[0].score || 1;
+            this.combins = this.combins
+                .filter(combin => !settings.driver_classes.length || settings.driver_classes.includes(combin.driver.class))
+                .filter(combin => !settings.body_classes.length || settings.body_classes.find(c => combin.body.classes.includes(c)))
+                .filter(combin => !settings.drivers.length || settings.drivers.find(d => combin.driver.names[0] === d.names[0]))
+                .filter(combin => !settings.bodies.length || settings.bodies.find(d => combin.body.names[0] === d.names[0]))
+                .filter(combin => !settings.tires.length || settings.tires.find(d => combin.tire.names[0] === d.names[0]))
+                .filter(combin => !settings.gliders.length || settings.gliders.find(d => combin.glider.names[0] === d.names[0]))
+                .map(c => {
+                    c.score = (c.score || 0) * 100 / max;
+                    return c;
+                });
+            this.subject.next(this.combins);
+        })
+    }
+
+    getSubject() {
+        return this.subject;
     }
 }

@@ -1,1 +1,26 @@
-<app-chart type="radar" [data]="data"></app-chart>
+<mat-expansion-panel expanded style="margin: .5em .5em 0 .5em;">
+    <mat-expansion-panel-header>
+        Compare Build
+    </mat-expansion-panel-header>
+    <app-chart type="radar" [data]="radarData" [options]="radarOptions"></app-chart>
+</mat-expansion-panel>
+<mat-expansion-panel expanded style="margin: .5em;">
+    <mat-expansion-panel-header>
+        Compare Stats
+    </mat-expansion-panel-header>
+    <div class="config-container">
+        <mat-form-field>
+            <mat-label>Stat on X-Axis</mat-label>
+            <mat-select [(value)]="scatterStatX">
+                <mat-option *ngFor="let stat of filteredStats" [value]="stat.key">{{stat.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Stat on Y-Axis</mat-label>
+            <mat-select [(value)]="scatterStatY">
+                <mat-option *ngFor="let stat of filteredStats" [value]="stat.key">{{stat.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <app-chart type="scatter" [data]="scatterData"></app-chart>
+</mat-expansion-panel>

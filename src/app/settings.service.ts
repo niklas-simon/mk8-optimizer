@@ -30,13 +30,15 @@ export class SettingsService {
         gliders: []
     };
 
-    subject = new ReplaySubject<Settings>();
+    subject = new ReplaySubject<Settings>(1);
 
-    constructor() { }
+    constructor() {
+        this.subject.next(this.settings);
+    }
 
     get() {
         return this.settings;
-    }  
+    }
 
     getSubject() {
         return this.subject;

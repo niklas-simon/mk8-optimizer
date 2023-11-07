@@ -13,3 +13,13 @@ table {
 mat-paginator {
     flex: 0;
 }
+th {
+    padding: 1em;
+}
+.compare-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: .5em;
+}

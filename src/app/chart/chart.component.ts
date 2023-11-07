@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-import Chart, { ChartData, ChartTypeRegistry } from 'chart.js/auto';
+import Chart, { ChartData, ChartOptions, ChartTypeRegistry } from 'chart.js/auto';
 
 @Component({
     selector: 'app-chart',
@@ -9,6 +9,7 @@ import Chart, { ChartData, ChartTypeRegistry } from 'chart.js/auto';
 export class ChartComponent implements OnInit, AfterViewInit {
     @Input() type: keyof ChartTypeRegistry = 'line';
     @Input() data: ChartData<keyof ChartTypeRegistry> = {labels: [], datasets: []};
+    @Input() options?: ChartOptions;
 
     @ViewChild('canvas') canvas?: ElementRef;
 
@@ -23,7 +24,8 @@ export class ChartComponent implements OnInit, AfterViewInit {
             }
             this.chart = new Chart(this.canvas.nativeElement, {
                 type: this.type,
-                data: this.data
+                data: this.data,
+                options: this.options
             })
             this.chart.draw();
         }
