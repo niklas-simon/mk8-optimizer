@@ -2,6 +2,7 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { ChartData, ChartOptions, ChartTypeRegistry, Point } from 'chart.js';
 import { Combination, Stat, StatsService, stats } from '../stats.service';
 import { Settings, SettingsService } from '../settings.service';
+import { ClickEvent } from '../chart/chart.component';
 
 @Component({
     selector: 'app-statistics',
@@ -27,6 +28,7 @@ export class StatisticsComponent implements OnInit {
             }
         }
     }
+    settings = this.settingsService.get();
 
     setRadar() {
         this.radarData = {
@@ -40,11 +42,6 @@ export class StatisticsComponent implements OnInit {
                 }
             })
         }
-    }
-
-    setScatterStats() {
-        this.scatterStatX = this.filteredStats[0].key;
-        this.scatterStatY = this.filteredStats[1].key;
     }
 
     setScatter() {
@@ -78,17 +75,15 @@ export class StatisticsComponent implements OnInit {
                 }
             ]
         }
-        console.log(this.scatterData);
     }
 
     constructor(private settingsService: SettingsService, private statsService: StatsService) { }
 
     ngOnInit(): void {
         this.settingsService.getSubject().subscribe(settings => {
-            console.log("statistics: settings changed", settings);
-            this.filteredStats = stats.filter(s => typeof s.simple === "undefined" || s.simple === settings.simple);
+            this.filteredStats = stats.filter(s => typeof s.simple === "undefined" || s.simple === settings.simple).sort((a, b) => a.key < b.key ? -1 : 1);
+            this.settings = settings;
             this.setRadar();
-            this.setScatterStats();
             this.setScatter();
         });
         this.statsService.getSubject().subscribe(combins => {
@@ -99,10 +94,31 @@ export class StatisticsComponent implements OnInit {
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes['selected']?.currentValue) {
-            console.log("statistics: selected changed", changes['selected'].currentValue);
             this.setRadar();
             this.setScatter();
         }
+    }
+
+    onChartClick(e: ClickEvent) {
+        const point = e as Point;
+        if (!this.settings.stats.find(s => s.key === this.scatterStatX && s.value === point.x)) {
+            this.settings.stats.push({
+                key: this.scatterStatX,
+                value: point.x
+            })
+        }
+        if (!this.settings.stats.find(s => s.key === this.scatterStatY && s.value === point.y)) {
+            this.settings.stats.push({
+                key: this.scatterStatY,
+                value: point.y
+            })
+        }
+        this.settingsService.set(this.settings);
+    }
+
+    resetFilter() {
+        this.settings.stats = [];
+        this.settingsService.set(this.settings);
     }
 
 }

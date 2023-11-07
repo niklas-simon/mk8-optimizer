@@ -161,6 +161,7 @@ export class StatsService {
                 .filter(combin => !settings.bodies.length || settings.bodies.find(d => combin.body.names[0] === d.names[0]))
                 .filter(combin => !settings.tires.length || settings.tires.find(d => combin.tire.names[0] === d.names[0]))
                 .filter(combin => !settings.gliders.length || settings.gliders.find(d => combin.glider.names[0] === d.names[0]))
+                .filter(combin => !settings.stats.length || !settings.stats.find(s => (combin as any)[s.key] !== s.value))
                 .map(c => {
                     c.score = (c.score || 0) * 100 / max;
                     return c;

@@ -22,6 +22,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ChartComponent } from './chart/chart.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 import Chart from 'chart.js/auto';
 
@@ -50,7 +51,8 @@ import Chart from 'chart.js/auto';
         MatInputModule,
         MatSelectModule,
         MatSlideToggleModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatButtonModule
     ],
     providers: [],
     bootstrap: [AppComponent]

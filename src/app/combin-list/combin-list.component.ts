@@ -28,7 +28,9 @@ export class CombinListComponent implements OnInit, AfterViewInit {
     ngOnInit(): void {
         this.statsService.getSubject().subscribe(combins => {
             this.combins = combins;
-            this.changeSelection(this.combins[0]);
+            if (this.combins.length) {
+                this.changeSelection(this.combins[0]);
+            }
             if (this.paginator) {
                 this.tableData.data = this.combins;
             }

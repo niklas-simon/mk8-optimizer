@@ -1,5 +1,8 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-import Chart, { ChartData, ChartOptions, ChartTypeRegistry } from 'chart.js/auto';
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import Chart, { BubbleDataPoint, ChartData, ChartEvent, ChartOptions, ChartTypeRegistry, Point } from 'chart.js/auto';
+import * as helper from 'chart.js/helpers';
+
+export type ClickEvent = number | [number, number] | Point | BubbleDataPoint | null;
 
 @Component({
     selector: 'app-chart',
@@ -13,6 +16,8 @@ export class ChartComponent implements OnInit, AfterViewInit {
 
     @ViewChild('canvas') canvas?: ElementRef;
 
+    @Output() canvasClick = new EventEmitter<ClickEvent>();
+
     chart?: Chart;
 
     constructor() { }
@@ -25,7 +30,22 @@ export class ChartComponent implements OnInit, AfterViewInit {
             this.chart = new Chart(this.canvas.nativeElement, {
                 type: this.type,
                 data: this.data,
-                options: this.options
+                options: Object.assign({
+                    onClick: (e: Event) => {
+                        if (!this.chart) {
+                            return;
+                        }
+                        const interaction = this.chart.getElementsAtEventForMode(e, "point", {intersect: true}, true);
+                        if (!interaction.length) {
+                            return;
+                        }
+                        const event = this.chart.data.datasets[interaction[0].datasetIndex].data[interaction[0].index];
+                        this.canvasClick.emit(event);
+                    },
+                    intersection: {
+                        mode: "nearest"
+                    }
+                }, (this.options || {}) as any)
             })
             this.chart.draw();
         }
@@ -33,7 +53,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
 
     ngOnInit(): void {
     }
-    
+
     ngAfterViewInit(): void {
         this.drawChart();
     }
@@ -42,5 +62,10 @@ export class ChartComponent implements OnInit, AfterViewInit {
         if (changes['data'].currentValue || changes['type'].currentValue) {
             this.drawChart();
         }
+    }
+
+    @HostListener('window:resize')
+    onResize() {
+        this.chart?.resize();
     }
 }

@@ -12,6 +12,10 @@ export interface Settings {
     bodies: Body[];
     tires: Part[];
     gliders: Part[];
+    stats: {
+        key: string,
+        value: number
+    }[]
 }
 
 @Injectable({
@@ -27,7 +31,8 @@ export class SettingsService {
         drivers: [],
         bodies: [],
         tires: [],
-        gliders: []
+        gliders: [],
+        stats: []
     };
 
     subject = new ReplaySubject<Settings>(1);

@@ -1,11 +1,12 @@
 :host {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
 }
 .table-container {
     flex: 1;
     overflow-y: auto;
+    overflow-x: visible;
 }
 table {
     width: 100%;
