@@ -20,33 +20,45 @@ import { MatSelectModule } from '@angular/material/select';
 import { PartComponent } from './part/part.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { ChartComponent } from './chart/chart.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+import Chart from 'chart.js/auto';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CombinListComponent,
-    SettingsComponent,
-    PartComponent,
-    StatisticsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatListModule,
-    MatPaginatorModule,
-    MatTableModule,
-    DragDropModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatSortModule,
-    MatCardModule,
-    MatSliderModule,
-    MatInputModule,
-    MatSelectModule,
-    MatSlideToggleModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        CombinListComponent,
+        SettingsComponent,
+        PartComponent,
+        StatisticsComponent,
+        ChartComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatListModule,
+        MatPaginatorModule,
+        MatTableModule,
+        DragDropModule,
+        MatIconModule,
+        MatExpansionModule,
+        MatSortModule,
+        MatCardModule,
+        MatSliderModule,
+        MatInputModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatCheckboxModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+    constructor() {
+        Chart.defaults.borderColor = "#a0a0a0";
+        Chart.defaults.color = "#ffffff"
+    }
+}

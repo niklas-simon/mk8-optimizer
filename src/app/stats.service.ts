@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { SettingsService } from './settings.service';
 
 export interface Part {
     names: string[],
@@ -32,25 +33,14 @@ export interface Combination {
     ta: number,
     tg: number,
     iv: number,
-    score?: number
+    score?: number,
+    selected?: boolean
 }
 
 export interface Stat {
     key: string,
     name: string,
     simple?: boolean
-}
-
-export interface Settings {
-    priority: Stat[];
-    simple: boolean;
-    weight: number;
-    driver_classes: string[];
-    body_classes: string[];
-    drivers: Driver[];
-    bodies: Body[];
-    tires: Part[];
-    gliders: Part[];
 }
 
 export const stats: Stat[] = [
@@ -137,18 +127,6 @@ export const stats: Stat[] = [
     }
 ]
 
-export const defaultSettings: Settings = {
-    priority: stats.filter(s => typeof s.simple === "undefined" || !s.simple),
-    simple: false,
-    weight: 1.8,
-    driver_classes: [],
-    body_classes: [],
-    drivers: [],
-    bodies: [],
-    tires: [],
-    gliders: []
-}
-
 const COMBINS = require('../assets/combinations.json') as Combination[];
 
 @Injectable({
@@ -156,10 +134,11 @@ const COMBINS = require('../assets/combinations.json') as Combination[];
 })
 export class StatsService {
 
-    constructor() { }
+    constructor(private settingsService: SettingsService) { }
 
-    get(settings: Settings): Combination[] {
-        return COMBINS
+    get(): Combination[] {
+        const settings = this.settingsService.get();
+        const combins = COMBINS
             .filter(combin => !settings.driver_classes.length || settings.driver_classes.includes(combin.driver.class))
             .filter(combin => !settings.body_classes.length || settings.body_classes.find(c => combin.body.classes.includes(c)))
             .filter(combin => !settings.drivers.length || settings.drivers.find(d => combin.driver.names[0] === d.names[0]))
@@ -174,8 +153,10 @@ export class StatsService {
                     score += (combin as any)[stat.key] * Math.pow(settings.weight, -i);
                 }, 0);
                 combin.score = score;
+                combin.selected = false;
                 return combin;
             })
             .sort((a, b) => (b.score || 0) - (a.score || 0));
+        return combins;
     }
 }

@@ -1,5 +1,11 @@
 <div class="table-container">
     <table mat-table [dataSource]="tableData">
+        <ng-container matColumnDef="selected">
+            <th mat-header-cell *matHeaderCellDef>Show Stats</th>
+            <td mat-cell *matCellDef="let e">
+                <mat-checkbox [checked]="e.selected" (change)="e.selected = !e.selected; changeSelection()"></mat-checkbox>
+            </td>
+        </ng-container>
         <ng-container matColumnDef="score">
             <th mat-header-cell *matHeaderCellDef>Score</th>
             <td mat-cell *matCellDef="let e">{{e.score | number:"1.2-2"}}</td>

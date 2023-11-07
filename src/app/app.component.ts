@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
-import { Settings, StatsService, defaultSettings } from './stats.service';
+import { Component, OnInit } from '@angular/core';
+import { Combination, StatsService } from './stats.service';
+import { SettingsService } from './settings.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-    combins = this.stats.get(defaultSettings);
+export class AppComponent implements OnInit {
+    selection: Combination[] = [];
 
-    constructor(private stats: StatsService) {}
+    constructor(private statsService: StatsService, private settingsService: SettingsService) {}
 
-    onSettingsChange(e: Settings) {
-        this.combins = this.stats.get(e);
-    }
+    ngOnInit(): void {}
 }

@@ -1,7 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Driver, Part, Settings, Stat, defaultSettings, Body, stats } from '../stats.service';
+import { Driver, Part, Stat, Body, stats } from '../stats.service';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { MatSliderChange } from '@angular/material/slider';
+import { Settings, SettingsService } from '../settings.service';
 
 const STATS = require('../../assets/statistics.json') as {
     drivers: Driver[],
@@ -16,20 +17,19 @@ const STATS = require('../../assets/statistics.json') as {
     styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-    @Output() onChange = new EventEmitter<Settings>();
-
-    settings = defaultSettings;
+    settings = this.settingsService.get();
     stats = STATS;
     filteredDrivers = STATS.drivers;
     filteredBodies = STATS.bodies;
 
-    constructor() { }
+    constructor(private settingsService: SettingsService) { }
 
     ngOnInit(): void {
+        this.settingsService.getSubject().subscribe(s => this.settings = s);
     }
 
     change() {
-        this.onChange.emit(this.settings);
+        this.settingsService.set(this.settings);
     }
 
     drop(e: CdkDragDrop<Stat[]>) {
