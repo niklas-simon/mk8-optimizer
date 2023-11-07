@@ -1,0 +1,12 @@
+{
+    "name": "Mk8 Kart Builder",
+    "icons": [
+        {
+            "src": "assets/icons/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://mk8-builder.pein-gera.de",
+    "display": "fullscreen"
+}

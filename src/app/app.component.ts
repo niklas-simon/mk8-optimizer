@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Combination, StatsService } from './stats.service';
 import { SettingsService } from './settings.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
     selector: 'app-root',
@@ -9,8 +10,13 @@ import { SettingsService } from './settings.service';
 })
 export class AppComponent implements OnInit {
     selection: Combination[] = [];
+    isLandscape = false;
 
-    constructor() {}
+    constructor(private breakpointObserver: BreakpointObserver) {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.breakpointObserver.observe('(orientation: landscape)').subscribe(state => {
+            this.isLandscape = state.matches;
+        })
+    }
 }

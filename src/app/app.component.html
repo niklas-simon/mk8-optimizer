@@ -1,3 +1,29 @@
-<app-statistics [selected]="selection" style="flex: 1; flex-shrink: 2;"></app-statistics>
-<app-combin-list (onSelection)="selection = $event" style="flex: 1;"></app-combin-list>
-<app-settings style="flex: 1; flex-shrink: 2; max-width: 500px;"></app-settings>
+<ng-template #statistics>
+    <app-statistics [selected]="selection" style="flex: 1; flex-shrink: 2; min-width: 300px;"></app-statistics>
+</ng-template>
+<ng-template #list>
+    <app-combin-list (onSelection)="selection = $event" style="flex: 1; height: 100%;"></app-combin-list>
+</ng-template>
+<ng-template #settings>
+    <app-settings style="flex: 1; flex-shrink: 2; max-width: 500px; min-width: 300px;"></app-settings>
+</ng-template>
+<ng-container *ngIf="isLandscape else tabs">
+    <ng-container *ngTemplateOutlet="statistics"></ng-container>
+    <ng-container *ngTemplateOutlet="list"></ng-container>
+    <ng-container *ngTemplateOutlet="settings"></ng-container>
+</ng-container>
+<ng-template #tabs>
+    <mat-tab-group style="flex: 1;" mat-align-tabs="center" mat-stretch-tabs="true">
+        <mat-tab label="Compare">
+            <ng-container *ngTemplateOutlet="statistics"></ng-container>
+        </mat-tab>
+        <mat-tab label="List">
+            <div class="list-container">
+                <ng-container *ngTemplateOutlet="list"></ng-container>
+            </div>
+        </mat-tab>
+        <mat-tab label="Settings">
+            <ng-container *ngTemplateOutlet="settings"></ng-container>
+        </mat-tab>
+    </mat-tab-group>
+</ng-template>

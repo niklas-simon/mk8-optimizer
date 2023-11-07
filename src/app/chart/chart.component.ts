@@ -42,9 +42,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
                         const event = this.chart.data.datasets[interaction[0].datasetIndex].data[interaction[0].index];
                         this.canvasClick.emit(event);
                     },
-                    intersection: {
-                        mode: "nearest"
-                    }
+                    aspectRatio: 1
                 }, (this.options || {}) as any)
             })
             this.chart.draw();
