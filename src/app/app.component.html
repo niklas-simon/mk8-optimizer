@@ -13,7 +13,7 @@
     <ng-container *ngTemplateOutlet="settings"></ng-container>
 </ng-container>
 <ng-template #tabs>
-    <mat-tab-group style="flex: 1;" mat-align-tabs="center" mat-stretch-tabs="true">
+    <mat-tab-group style="flex: 1;" mat-align-tabs="center" mat-stretch-tabs="true" [selectedIndex]="1">
         <mat-tab label="Compare">
             <ng-container *ngTemplateOutlet="statistics"></ng-container>
         </mat-tab>
