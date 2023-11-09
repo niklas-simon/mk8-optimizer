@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+    - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install
+      run: |-
+        npm i
+        npm install --global @angular/cli
+    - name: build
+      run: ng build
+    - name: upload
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ${{ pein-gera.de }}
+        ftp-username: ${{ ftp_user }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/mk8-builder/
+        server-dir: /var/https-portal/vhosts/mk8builder.pein-gera.de/
