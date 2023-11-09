@@ -15,8 +15,8 @@ jobs:
     - name: upload
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ${{ pein-gera.de }}
-        ftp-username: ${{ ftp_user }}
+        ftp-server: 'ftp.pein-gera.de'
+        ftp-username: 'ftp_user'
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/mk8-builder/
-        server-dir: /var/https-portal/vhosts/mk8builder.pein-gera.de/
+        server-dir: /var/vhosts/mk8builder.pein-gera.de/
