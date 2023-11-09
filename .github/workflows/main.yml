@@ -6,6 +6,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: repo checkout
+      uses: actions/checkout@v4
+    - name: node setup
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
     - name: install
       run: |-
         npm i
