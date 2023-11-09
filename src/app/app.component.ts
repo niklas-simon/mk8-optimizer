@@ -10,12 +10,15 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 })
 export class AppComponent implements OnInit {
     selection: Combination[] = [];
-    isLandscape = false;
+    isLandscape?: boolean;
 
     constructor(private breakpointObserver: BreakpointObserver) {}
 
     ngOnInit(): void {
         this.breakpointObserver.observe('(orientation: landscape)').subscribe(state => {
+            if (typeof this.isLandscape !== "undefined" && this.isLandscape !== state.matches) {
+                window.location.reload();
+            }
             this.isLandscape = state.matches;
         })
     }

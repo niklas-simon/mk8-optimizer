@@ -18,11 +18,23 @@ export interface Settings {
     }[]
 }
 
+function getStored() {
+    try {
+        const str = window.localStorage.getItem("settings");
+        if (!str) {
+            return null;
+        }
+        return JSON.parse(str) as Settings;
+    } catch (_) {
+        return null;
+    }
+}
+
 @Injectable({
     providedIn: 'root'
 })
 export class SettingsService {
-    settings: Settings = {
+    settings: Settings = getStored() || {
         priority: stats.filter(s => typeof s.simple === "undefined" || !s.simple),
         simple: false,
         weight: 1.8,
@@ -51,6 +63,7 @@ export class SettingsService {
 
     set(settings: Settings) {
         this.settings = settings;
+        window.localStorage.setItem("settings", JSON.stringify(settings));
         this.subject.next(this.settings);
     }
 }

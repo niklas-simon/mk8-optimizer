@@ -1,6 +1,6 @@
 {
-  "name": "mk8-builder",
-  "short_name": "mk8-builder",
+  "name": "Mk8 Kart Builder",
+  "short_name": "Mk8 Builder",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
