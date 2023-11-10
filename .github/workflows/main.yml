@@ -23,7 +23,7 @@ jobs:
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: 'ftp.pein-gera.de'
-        user: 'ftp_user'
+        user: 'root'
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: "dist/mk8-builder"
-        remoteDir: "vhosts/mk8builder.pein-gera.de"
+        remoteDir: "/ftp/root/vhosts/mk8builder.pein-gera.de"
