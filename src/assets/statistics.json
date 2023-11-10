@@ -11,7 +11,7 @@
                 "https://mario.wiki.gallery/images/thumb/a/a8/MK8_Ludwig_Icon.png/64px-MK8_Ludwig_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/64px-Mii_MK8.png"
             ],
-            "class": "medium",
+            "class": "Medium",
             "wg": 6,
             "ac": 2,
             "on": 4,
@@ -41,7 +41,7 @@
                 "https://mario.wiki.gallery/images/thumb/d/dd/MK8_Iggy_Icon.png/64px-MK8_Iggy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/0/00/MK8DX_Kamek_Icon.png/64px-MK8DX_Kamek_Icon.png"
             ],
-            "class": "medium",
+            "class": "Medium",
             "wg": 6,
             "ac": 2,
             "on": 5,
@@ -65,15 +65,16 @@
                 "Peach",
                 "Daisy",
                 "Yoshi",
-                "Birdo"
+                "Birdo",
+                "Peachette"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Peach_Icon.png/64px-MK8_Peach_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/3/32/MK8_Daisy_Icon.png/64px-MK8_Daisy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/9/91/MK8_Yoshi_Icon.png/64px-MK8_Yoshi_Icon.png",
-                "https://mario.wiki.gallery/images/thumb/f/f6/MK8D_Birdo_Icon.png/64px-MK8D_Birdo_Icon.png"
+                "https://mario.wiki.gallery/images/thumb/f/f6/MK8D_Birdo_Icon.png/64px-MK8D_Birdo_Icon.png",
+                "https://mario.wiki.gallery/images/thumb/f/fd/MK8DX_Peachette_Icon.png/64px-MK8DX_Peachette_Icon.png"
             ],
-            "class": "medium",
             "wg": 4,
             "ac": 3,
             "on": 3,
@@ -103,7 +104,7 @@
                 "https://mario.wiki.gallery/images/thumb/7/7f/MK8_ShyGuy_Icon.png/64px-MK8_ShyGuy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Larry_Icon.png/64px-MK8_Larry_Icon.png"
             ],
-            "class": "light",
+            "class": "Light",
             "wg": 3,
             "ac": 4,
             "on": 3,
@@ -133,7 +134,6 @@
                 "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Wendy_Icon.png/64px-MK8_Wendy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/2/20/MK8_Isabelle_Icon.png/64px-MK8_Isabelle_Icon.png"
             ],
-            "class": "light",
             "wg": 2,
             "ac": 5,
             "on": 4,
@@ -150,7 +150,8 @@
             "iv": 3,
             "sp": 3,
             "hn": 7,
-            "tr": 3
+            "tr": 3,
+            "class": "Light"
         },
         {
             "names": [
@@ -163,7 +164,6 @@
                 "https://mario.wiki.gallery/images/thumb/7/7d/MK8_Lakitu_Icon.png/64px-MK8_Lakitu_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/2/26/MK8_Bowser_Jr_Icon.png/64px-MK8_Bowser_Jr_Icon.png"
             ],
-            "class": "light",
             "wg": 2,
             "ac": 4,
             "on": 1,
@@ -180,7 +180,8 @@
             "iv": 4,
             "sp": 3,
             "hn": 8,
-            "tr": 3
+            "tr": 3,
+            "class": "Light"
         },
         {
             "names": [
@@ -191,7 +192,6 @@
                 "https://mario.wiki.gallery/images/thumb/4/47/MK8_Bowser_Icon.png/64px-MK8_Bowser_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/7/72/MK8_Morton_Icon.png/64px-MK8_Morton_Icon.png"
             ],
-            "class": "heavy",
             "wg": 10,
             "ac": 0,
             "on": 6,
@@ -208,7 +208,8 @@
             "iv": 6,
             "sp": 10,
             "hn": 0,
-            "tr": 3
+            "tr": 3,
+            "class": "Heavy"
         },
         {
             "names": [
@@ -223,7 +224,6 @@
                 "https://mario.wiki.gallery/images/thumb/3/3e/MK8_Roy_Icon.png/64px-MK8_Roy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/7/7e/MK8DX_Wiggler_Icon.png/64px-MK8DX_Wiggler_Icon.png"
             ],
-            "class": "heavy",
             "wg": 8,
             "ac": 1,
             "on": 10,
@@ -240,20 +240,20 @@
             "iv": 4,
             "sp": 9,
             "hn": 2,
-            "tr": 5
+            "tr": 5,
+            "class": "Heavy"
         },
         {
             "names": [
                 "Wario",
                 "Dry Bowser",
-                "Mii (heavy)"
+                "Funky Kong"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Wario_Icon.png/64px-MK8_Wario_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/2/29/MK8_Dry_Bowser_Icon.png/64px-MK8_Dry_Bowser_Icon.png",
-                "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/64px-Mii_MK8.png"
+                "https://mario.wiki.gallery/images/thumb/4/4a/MK8DX_Funky_Kong_Icon.png/64px-MK8DX_Funky_Kong_Icon.png"
             ],
-            "class": "heavy",
             "wg": 9,
             "ac": 0,
             "on": 5,
@@ -270,22 +270,24 @@
             "iv": 5,
             "sp": 10,
             "hn": 1,
-            "tr": 3
+            "tr": 3,
+            "class": "Heavy"
         },
         {
             "names": [
                 "Rosalina",
                 "Link",
                 "King Boo",
-                "Link (Breath of the Wild)"
+                "Link (Breath of the Wild)",
+                "Pauline"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/8/89/MK8_Rosalina_Icon.png/64px-MK8_Rosalina_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/e/e8/MK8_Link_Icon.png/64px-MK8_Link_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/1/1d/MK8DX_King_Boo_Icon.png/64px-MK8DX_King_Boo_Icon.png",
-                "https://mario.wiki.gallery/images/thumb/9/9e/MK8D_BotW_Link_Icon.png/64px-MK8D_BotW_Link_Icon.png"
+                "https://mario.wiki.gallery/images/thumb/9/9e/MK8D_BotW_Link_Icon.png/64px-MK8D_BotW_Link_Icon.png",
+                "https://mario.wiki.gallery/images/thumb/d/dd/MK8DX_Pauline_Icon.png/64px-MK8DX_Pauline_Icon.png"
             ],
-            "class": "medium",
             "wg": 7,
             "ac": 1,
             "on": 9,
@@ -302,7 +304,8 @@
             "iv": 4,
             "sp": 8,
             "hn": 3,
-            "tr": 6
+            "tr": 6,
+            "class": "Heavy"
         },
         {
             "names": [
@@ -315,7 +318,6 @@
                 "https://mario.wiki.gallery/images/thumb/0/0d/MK8_PGPeach_Icon.png/64px-MK8_PGPeach_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/c/c8/MK8DX_Gold_Mario_Icon.png/64px-MK8DX_Gold_Mario_Icon.png"
             ],
-            "class": "heavy",
             "wg": 10,
             "ac": 1,
             "on": 8,
@@ -332,22 +334,20 @@
             "iv": 3,
             "sp": 8,
             "hn": 3,
-            "tr": 4.5
+            "tr": 4.5,
+            "class": "Heavy"
         },
         {
             "names": [
                 "Baby Mario",
                 "Baby Luigi",
-                "Dry Bones",
-                "Mii (light)"
+                "Dry Bones"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/d/d2/MK8_BabyMario_Icon.png/64px-MK8_BabyMario_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/a/aa/MK8_BabyLuigi_Icon.png/64px-MK8_BabyLuigi_Icon.png",
-                "https://mario.wiki.gallery/images/thumb/3/3f/MK8DX_Dry_Bones_Icon.png/64px-MK8DX_Dry_Bones_Icon.png",
-                "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/64px-Mii_MK8.png"
+                "https://mario.wiki.gallery/images/thumb/3/3f/MK8DX_Dry_Bones_Icon.png/64px-MK8DX_Dry_Bones_Icon.png"
             ],
-            "class": "light",
             "wg": 1,
             "ac": 5,
             "on": 2,
@@ -364,7 +364,8 @@
             "iv": 5,
             "sp": 2,
             "hn": 8,
-            "tr": 3
+            "tr": 3,
+            "class": "Light"
         },
         {
             "names": [
@@ -375,7 +376,6 @@
                 "https://mario.wiki.gallery/images/thumb/3/3d/MK8_BabyPeach_Icon.png/64px-MK8_BabyPeach_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/4/43/MK8_BabyDaisy_Icon.png/64px-MK8_BabyDaisy_Icon.png"
             ],
-            "class": "light",
             "wg": 0,
             "ac": 4,
             "on": 3,
@@ -392,7 +392,8 @@
             "iv": 6,
             "sp": 1,
             "hn": 10,
-            "tr": 4
+            "tr": 4,
+            "class": "Light"
         },
         {
             "names": [
@@ -403,7 +404,6 @@
                 "https://mario.wiki.gallery/images/thumb/0/09/MK8_BabyRosalina_Icon.png/64px-MK8_BabyRosalina_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/f/fc/MK8_Lemmy_Icon.png/64px-MK8_Lemmy_Icon.png"
             ],
-            "class": "light",
             "wg": 0,
             "ac": 5,
             "on": 4,
@@ -420,7 +420,8 @@
             "iv": 6,
             "sp": 1,
             "hn": 9,
-            "tr": 3.5
+            "tr": 3.5,
+            "class": "Light"
         },
         {
             "names": [
@@ -433,7 +434,6 @@
                 "https://mario.wiki.gallery/images/thumb/1/16/VillagerMale-Icon-MK8.png/64px-VillagerMale-Icon-MK8.png",
                 "https://mario.wiki.gallery/images/thumb/3/3c/MK8DX_Male_Inkling_Icon.png/64px-MK8DX_Male_Inkling_Icon.png"
             ],
-            "class": "medium",
             "wg": 5,
             "ac": 3,
             "on": 7,
@@ -450,20 +450,22 @@
             "iv": 1,
             "sp": 6,
             "hn": 5,
-            "tr": 4
+            "tr": 4,
+            "class": "Medium"
         },
         {
             "names": [
                 "Cat Peach",
                 "Villager (female)",
-                "Inkling Girl"
+                "Inkling Girl",
+                "Diddy Kong"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/a/ad/MK8_Cat_Peach_Icon.png/64px-MK8_Cat_Peach_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/c/c3/VillagerFemale-Icon-MK8.png/64px-VillagerFemale-Icon-MK8.png",
-                "https://mario.wiki.gallery/images/thumb/b/b9/MK8DX_Female_Inkling_Icon.png/64px-MK8DX_Female_Inkling_Icon.png"
+                "https://mario.wiki.gallery/images/thumb/b/b9/MK8DX_Female_Inkling_Icon.png/64px-MK8DX_Female_Inkling_Icon.png",
+                "https://mario.wiki.gallery/images/thumb/8/82/MK8DX_Diddy_Kong_Icon.png/64px-MK8DX_Diddy_Kong_Icon.png"
             ],
-            "class": "medium",
             "wg": 3,
             "ac": 4,
             "on": 2,
@@ -480,7 +482,8 @@
             "iv": 3,
             "sp": 5,
             "hn": 6,
-            "tr": 2.5
+            "tr": 2.5,
+            "class": "Medium"
         },
         {
             "names": [
@@ -489,7 +492,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/8/86/MK8DX_Petey_Piranha_Icon.png/64px-MK8DX_Petey_Piranha_Icon.png"
             ],
-            "class": "heavy",
             "wg": 10,
             "ac": 1,
             "on": 8,
@@ -506,7 +508,8 @@
             "iv": 6,
             "sp": 8,
             "hn": 3,
-            "tr": 4.5
+            "tr": 4.5,
+            "class": "Heavy"
         }
     ],
     "bodies": [
@@ -518,10 +521,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/0/05/StandardKartBodyMK8.png/100px-StandardKartBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/8/8a/TheDukeBodyMK8.png/100px-TheDukeBodyMK8.png"
-            ],
-            "classes": [
-                "kart",
-                "bike"
             ],
             "wg": 2,
             "ac": 4,
@@ -539,20 +538,18 @@
             "iv": 3,
             "sp": 3,
             "hn": 2.75,
-            "tr": 3
-        },
-        {
-            "names": [
-                "Pipe Frame",
-                "Varmint"
-            ],
-            "images": [
-                "https://mario.wiki.gallery/images/thumb/d/d1/PipeFrameBodyMK8.png/100px-PipeFrameBodyMK8.png",
-                "https://mario.wiki.gallery/images/thumb/d/d0/VarmintBodyMK8.png/100px-VarmintBodyMK8.png"
-            ],
+            "tr": 3,
             "classes": [
                 "kart",
                 "bike"
+            ]
+        },
+        {
+            "names": [
+                "Pipe Frame"
+            ],
+            "images": [
+                "https://mario.wiki.gallery/images/thumb/d/d1/PipeFrameBodyMK8.png/100px-PipeFrameBodyMK8.png"
             ],
             "wg": 1,
             "ac": 6,
@@ -567,10 +564,13 @@
             "tw": 4,
             "ta": 4,
             "tg": 2,
-            "iv": 2,
+            "iv": 3,
             "sp": 1.75,
             "hn": 3.75,
-            "tr": 3.5
+            "tr": 3.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -580,10 +580,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/d/df/Mach8BodyMK8.png/100px-Mach8BodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/f/f8/SportsCoupeMK8.png/100px-SportsCoupeMK8.png"
-            ],
-            "classes": [
-                "kart",
-                "kart"
             ],
             "wg": 3,
             "ac": 3,
@@ -598,10 +594,14 @@
             "tw": 2,
             "ta": 4,
             "tg": 2,
-            "iv": 4,
+            "iv": 3,
             "sp": 3.75,
             "hn": 2.5,
-            "tr": 3
+            "tr": 3,
+            "classes": [
+                "kart",
+                "kart"
+            ]
         },
         {
             "names": [
@@ -611,10 +611,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/9/94/Steel_Driver.png/100px-Steel_Driver.png",
                 "https://mario.wiki.gallery/images/thumb/5/56/TrispeederBodyMK8.png/100px-TrispeederBodyMK8.png"
-            ],
-            "classes": [
-                "kart",
-                "kart"
             ],
             "wg": 4,
             "ac": 1,
@@ -632,20 +628,18 @@
             "iv": 6,
             "sp": 2.75,
             "hn": 2,
-            "tr": 2
+            "tr": 2,
+            "classes": [
+                "kart",
+                "kart"
+            ]
         },
         {
             "names": [
-                "Cat Cruiser",
-                "Teddy Buggy"
+                "Cat Cruiser"
             ],
             "images": [
-                "https://mario.wiki.gallery/images/thumb/f/f4/CatCruiserBodyMK8.png/100px-CatCruiserBodyMK8.png",
-                "https://mario.wiki.gallery/images/thumb/f/fa/TeddyBuggyBodyMK8.png/100px-TeddyBuggyBodyMK8.png"
-            ],
-            "classes": [
-                "kart",
-                "atv"
+                "https://mario.wiki.gallery/images/thumb/f/f4/CatCruiserBodyMK8.png/100px-CatCruiserBodyMK8.png"
             ],
             "wg": 2,
             "ac": 5,
@@ -663,7 +657,10 @@
             "iv": 3,
             "sp": 2.75,
             "hn": 3.25,
-            "tr": 3.5
+            "tr": 3.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -675,11 +672,6 @@
                 "https://mario.wiki.gallery/images/thumb/6/6c/CircuitSpecialBodyMK8.png/100px-CircuitSpecialBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/1/15/ZeldaMK8Bdasher.png/100px-ZeldaMK8Bdasher.png",
                 "https://mario.wiki.gallery/images/thumb/c/cd/MK8PWing.png/100px-MK8PWing.png"
-            ],
-            "classes": [
-                "kart",
-                "kart",
-                "kart"
             ],
             "wg": 3,
             "ac": 1,
@@ -697,7 +689,12 @@
             "iv": 6,
             "sp": 3,
             "hn": 1,
-            "tr": 2
+            "tr": 2,
+            "classes": [
+                "kart",
+                "kart",
+                "kart"
+            ]
         },
         {
             "names": [
@@ -707,10 +704,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/c/c2/BadwagonBodyMK8.png/100px-BadwagonBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/c/c2/GLA-MK8.png/100px-GLA-MK8.png"
-            ],
-            "classes": [
-                "kart",
-                "kart"
             ],
             "wg": 4,
             "ac": 0,
@@ -728,7 +721,11 @@
             "iv": 7,
             "sp": 2.75,
             "hn": 0.5,
-            "tr": 3.5
+            "tr": 3.5,
+            "classes": [
+                "kart",
+                "kart"
+            ]
         },
         {
             "names": [
@@ -736,9 +733,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/f/ff/PrancerBodyMK8.png/100px-PrancerBodyMK8.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 1,
             "ac": 2,
@@ -756,7 +750,10 @@
             "iv": 5,
             "sp": 3.25,
             "hn": 2.75,
-            "tr": 1.5
+            "tr": 1.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -766,10 +763,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/4/45/BiddybuggyBodyMK8.png/100px-BiddybuggyBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/1/18/MrScootyBodyMK8.png/100px-MrScootyBodyMK8.png"
-            ],
-            "classes": [
-                "kart",
-                "bike"
             ],
             "wg": 0,
             "ac": 7,
@@ -787,7 +780,11 @@
             "iv": 0,
             "sp": 1,
             "hn": 4.5,
-            "tr": 2.5
+            "tr": 2.5,
+            "classes": [
+                "kart",
+                "bike"
+            ]
         },
         {
             "names": [
@@ -795,9 +792,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/6/6d/LandshipBodyMK8.png/100px-LandshipBodyMK8.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 0,
             "ac": 6,
@@ -812,10 +806,13 @@
             "tw": 5,
             "ta": 2,
             "tg": 3,
-            "iv": 1,
+            "iv": 2,
             "sp": 2.25,
             "hn": 3.5,
-            "tr": 3
+            "tr": 3,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -823,9 +820,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/4/47/SneakerBodyMK8.png/100px-SneakerBodyMK8.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 2,
             "ac": 2,
@@ -843,7 +837,10 @@
             "iv": 5,
             "sp": 3,
             "hn": 2.5,
-            "tr": 0.5
+            "tr": 0.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -851,9 +848,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/f/fe/Gold_Standard.png/100px-Gold_Standard.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 2,
             "ac": 2,
@@ -871,19 +865,22 @@
             "iv": 4,
             "sp": 3,
             "hn": 2.5,
-            "tr": 0.5
+            "tr": 0.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
                 "Standard Bike",
+                "Flame Rider",
+                "Wild Wiggler",
                 "W 25 Silver Arrow"
-            ],
-            "classes": [
-                "bike",
-                "kart"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/8/84/StandardBikeBodyMK8.png/100px-StandardBikeBodyMK8.png",
+                "https://mario.wiki.gallery/images/thumb/3/31/FlameRiderBodyMK8.png/100px-FlameRiderBodyMK8.png",
+                "https://mario.wiki.gallery/images/thumb/a/aa/WildWigglerBodyMK8.png/100px-WildWigglerBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/2/25/W25SilverArrow-MK8.png/100px-W25SilverArrow-MK8.png"
             ],
             "wg": 1,
@@ -899,10 +896,16 @@
             "tw": 3,
             "ta": 4,
             "tg": 3,
-            "iv": 3,
+            "iv": 4,
             "sp": 2.75,
             "hn": 3.5,
-            "tr": 4
+            "tr": 4,
+            "classes": [
+                "bike",
+                "bike",
+                "atv",
+                "kart"
+            ]
         },
         {
             "names": [
@@ -912,10 +915,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/0/0e/CometBodyMK8.png/100px-CometBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/6/62/YoshiBikeBodyMK8.png/100px-YoshiBikeBodyMK8.png"
-            ],
-            "classes": [
-                "sport",
-                "sport"
             ],
             "wg": 2,
             "ac": 5,
@@ -931,10 +930,13 @@
             "ta": 3,
             "tg": 4,
             "iv": 2,
-            "class": "inward",
             "sp": 2.75,
             "hn": 3.25,
-            "tr": 3.5
+            "tr": 3.5,
+            "classes": [
+                "sport",
+                "sport"
+            ]
         },
         {
             "names": [
@@ -944,10 +946,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/f/fe/SportBikeBodyMK8.png/100px-SportBikeBodyMK8.png",
                 "https://mario.wiki.gallery/images/thumb/1/12/JetBikeBodyMK8.png/100px-JetBikeBodyMK8.png"
-            ],
-            "classes": [
-                "sport",
-                "sport"
             ],
             "wg": 1,
             "ac": 2,
@@ -965,35 +963,42 @@
             "iv": 3,
             "sp": 3.25,
             "hn": 2.75,
-            "tr": 1.5
+            "tr": 1.5,
+            "classes": [
+                "sport",
+                "sport"
+            ]
         },
         {
             "names": [
-                "Flame Rider"
+                "Varmint",
+                "City Tripper"
             ],
             "images": [
-                "https://mario.wiki.gallery/images/thumb/3/31/FlameRiderBodyMK8.png/100px-FlameRiderBodyMK8.png"
-            ],
-            "classes": [
-                "bike"
+                "https://mario.wiki.gallery/images/thumb/d/d0/VarmintBodyMK8.png/100px-VarmintBodyMK8.png",
+                "https://mario.wiki.gallery/images/thumb/b/be/MK8_Light-Green_City_Tripper.png/100px-MK8_Light-Green_City_Tripper.png"
             ],
             "wg": 1,
-            "ac": 5,
+            "ac": 6,
             "on": 3,
-            "of": 5,
-            "mt": 5,
+            "of": 4,
+            "mt": 6,
             "sl": 2,
-            "sw": 2,
-            "sa": 4,
-            "sg": 3,
-            "tl": 4,
-            "tw": 3,
+            "sw": 3,
+            "sa": 1,
+            "sg": 1,
+            "tl": 5,
+            "tw": 4,
             "ta": 4,
-            "tg": 3,
+            "tg": 2,
             "iv": 2,
-            "sp": 2.75,
-            "hn": 3.5,
-            "tr": 4
+            "sp": 1.75,
+            "hn": 3.75,
+            "tr": 3.5,
+            "classes": [
+                "bike",
+                "bike"
+            ]
         },
         {
             "names": [
@@ -1001,9 +1006,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/2/23/StandardATVBodyMK8.png/100px-StandardATVBodyMK8.png"
-            ],
-            "classes": [
-                "atv"
             ],
             "wg": 4,
             "ac": 0,
@@ -1021,35 +1023,38 @@
             "iv": 6,
             "sp": 2.75,
             "hn": 0.5,
-            "tr": 3.5
+            "tr": 3.5,
+            "classes": [
+                "atv"
+            ]
         },
         {
             "names": [
-                "Wild Wiggler"
+                "Teddy Buggy"
             ],
             "images": [
-                "https://mario.wiki.gallery/images/thumb/a/aa/WildWigglerBodyMK8.png/100px-WildWigglerBodyMK8.png"
+                "https://mario.wiki.gallery/images/thumb/f/fa/TeddyBuggyBodyMK8.png/100px-TeddyBuggyBodyMK8.png"
             ],
-            "classes": [
-                "atv"
-            ],
-            "wg": 1,
+            "wg": 2,
             "ac": 5,
-            "on": 3,
-            "of": 5,
-            "mt": 5,
+            "on": 4,
+            "of": 3,
+            "mt": 6,
             "sl": 2,
             "sw": 2,
-            "sa": 4,
-            "sg": 3,
+            "sa": 3,
+            "sg": 4,
             "tl": 4,
-            "tw": 3,
-            "ta": 4,
-            "tg": 3,
+            "tw": 2,
+            "ta": 3,
+            "tg": 4,
             "iv": 1,
             "sp": 2.75,
-            "hn": 3.5,
-            "tr": 4
+            "hn": 3.25,
+            "tr": 3.5,
+            "classes": [
+                "atv"
+            ]
         },
         {
             "names": [
@@ -1057,9 +1062,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/f/f4/300SLRoadster_MK8.png/100px-300SLRoadster_MK8.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 2,
             "ac": 4,
@@ -1077,7 +1079,10 @@
             "iv": 4,
             "sp": 3,
             "hn": 2.75,
-            "tr": 3
+            "tr": 3,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -1085,9 +1090,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/f/f6/MK8BlueFalcon.png/100px-MK8BlueFalcon.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 0,
             "ac": 3,
@@ -1105,7 +1107,10 @@
             "iv": 4,
             "sp": 3.25,
             "hn": 2.75,
-            "tr": 2
+            "tr": 2,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -1113,9 +1118,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/7/76/MK8_Tanooki_Buggy_Sprite.png/100px-MK8_Tanooki_Buggy_Sprite.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 3,
             "ac": 2,
@@ -1133,7 +1135,10 @@
             "iv": 4,
             "sp": 3.25,
             "hn": 3.5,
-            "tr": 5.5
+            "tr": 5.5,
+            "classes": [
+                "kart"
+            ]
         },
         {
             "names": [
@@ -1141,9 +1146,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/8/8a/MK8MasterCycle.png/100px-MK8MasterCycle.png"
-            ],
-            "classes": [
-                "sport"
             ],
             "wg": 2,
             "ac": 2,
@@ -1161,7 +1163,10 @@
             "iv": 3,
             "sp": 3,
             "hn": 2.5,
-            "tr": 0.5
+            "tr": 0.5,
+            "classes": [
+                "sport"
+            ]
         },
         {
             "names": [
@@ -1169,9 +1174,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/c/cf/MK8Streetle.png/100px-MK8Streetle.png"
-            ],
-            "classes": [
-                "kart"
             ],
             "wg": 0,
             "ac": 6,
@@ -1186,38 +1188,13 @@
             "tw": 5,
             "ta": 2,
             "tg": 3,
-            "iv": 2,
+            "iv": 3,
             "sp": 2.25,
             "hn": 3.5,
-            "tr": 3
-        },
-        {
-            "names": [
-                "City Tripper"
-            ],
-            "images": [
-                "https://mario.wiki.gallery/images/thumb/b/be/MK8_Light-Green_City_Tripper.png/100px-MK8_Light-Green_City_Tripper.png"
-            ],
+            "tr": 3,
             "classes": [
-                "bike"
-            ],
-            "wg": 1,
-            "ac": 6,
-            "on": 3,
-            "of": 4,
-            "mt": 6,
-            "sl": 2,
-            "sw": 3,
-            "sa": 1,
-            "sg": 1,
-            "tl": 5,
-            "tw": 4,
-            "ta": 4,
-            "tg": 2,
-            "iv": 1,
-            "sp": 1.75,
-            "hn": 3.75,
-            "tr": 3.5
+                "kart"
+            ]
         },
         {
             "names": [
@@ -1225,9 +1202,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/0/0a/MK8BoneRattler.png/100px-MK8BoneRattler.png"
-            ],
-            "classes": [
-                "atv"
             ],
             "wg": 4,
             "ac": 1,
@@ -1245,7 +1219,10 @@
             "iv": 5,
             "sp": 2.75,
             "hn": 2,
-            "tr": 2
+            "tr": 2,
+            "classes": [
+                "atv"
+            ]
         },
         {
             "names": [
@@ -1255,10 +1232,6 @@
             "images": [
                 "https://mario.wiki.gallery/images/thumb/7/70/MK8DX_Koopa_Clown.png/100px-MK8DX_Koopa_Clown.png",
                 "https://mario.wiki.gallery/images/thumb/2/26/MK8D_Master_Cycle_Zero.png/100px-MK8D_Master_Cycle_Zero.png"
-            ],
-            "classes": [
-                "kart",
-                "bike"
             ],
             "wg": 3,
             "ac": 2,
@@ -1276,7 +1249,11 @@
             "iv": 3,
             "sp": 3.25,
             "hn": 3.5,
-            "tr": 5.5
+            "tr": 5.5,
+            "classes": [
+                "kart",
+                "bike"
+            ]
         },
         {
             "names": [
@@ -1284,9 +1261,6 @@
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/6/63/MK8DX_Splat_Buggy.png/100px-MK8DX_Splat_Buggy.png"
-            ],
-            "classes": [
-                "atv"
             ],
             "wg": 0,
             "ac": 3,
@@ -1304,14 +1278,14 @@
             "iv": 3,
             "sp": 3.25,
             "hn": 2.75,
-            "tr": 2
+            "tr": 2,
+            "classes": [
+                "atv"
+            ]
         },
         {
             "names": [
                 "Inkstriker"
-            ],
-            "classes": [
-                "atv"
             ],
             "images": [
                 "https://mario.wiki.gallery/images/thumb/e/eb/MK8DX_Inkstriker.png/100px-MK8DX_Inkstriker.png"
@@ -1329,10 +1303,13 @@
             "tw": 2,
             "ta": 4,
             "tg": 2,
-            "iv": 3,
+            "iv": 1,
             "sp": 3.75,
             "hn": 2.5,
-            "tr": 3
+            "tr": 3,
+            "classes": [
+                "atv"
+            ]
         }
     ],
     "tires": [
@@ -1358,7 +1335,7 @@
             "tw": 3,
             "ta": 3,
             "tg": 3,
-            "iv": 3,
+            "iv": 4,
             "sp": 2.5,
             "hn": 3,
             "tr": 3.5
@@ -1385,7 +1362,7 @@
             "tw": 1,
             "ta": 0,
             "tg": 1,
-            "iv": 5,
+            "iv": 6,
             "sp": 2,
             "hn": 0.5,
             "tr": 5
@@ -1441,7 +1418,7 @@
             "tw": 4,
             "ta": 3,
             "tg": 4,
-            "iv": 4,
+            "iv": 5,
             "sp": 2.75,
             "hn": 3.75,
             "tr": 2.5
@@ -1468,7 +1445,7 @@
             "tw": 0,
             "ta": 2,
             "tg": 1,
-            "iv": 4,
+            "iv": 5,
             "sp": 2,
             "hn": 1.25,
             "tr": 2
@@ -1493,17 +1470,19 @@
             "tw": 2,
             "ta": 1,
             "tg": 0,
-            "iv": 5,
+            "iv": 6,
             "sp": 2.5,
             "hn": 1.25,
             "tr": 1.5
         },
         {
             "names": [
-                "Button"
+                "Button",
+                "Leaf Tires"
             ],
             "images": [
-                "https://mario.wiki.gallery/images/thumb/0/07/ButtonTiresMK8.png/100px-ButtonTiresMK8.png"
+                "https://mario.wiki.gallery/images/thumb/0/07/ButtonTiresMK8.png/100px-ButtonTiresMK8.png",
+                "https://mario.wiki.gallery/images/thumb/f/f9/Leaf_Tires_MK8.png/100px-Leaf_Tires_MK8.png"
             ],
             "wg": 0,
             "ac": 5,
@@ -1518,7 +1497,7 @@
             "tw": 3,
             "ta": 4,
             "tg": 2,
-            "iv": 2,
+            "iv": 3,
             "sp": 1.75,
             "hn": 3,
             "tr": 2
@@ -1570,7 +1549,7 @@
             "tw": 1,
             "ta": 2,
             "tg": 3,
-            "iv": 3,
+            "iv": 4,
             "sp": 1.75,
             "hn": 2,
             "tr": 4
@@ -1595,7 +1574,7 @@
             "tw": 1,
             "ta": 2,
             "tg": 3,
-            "iv": 5,
+            "iv": 6,
             "sp": 1.75,
             "hn": 2,
             "tr": 4
@@ -1620,7 +1599,7 @@
             "tw": 2,
             "ta": 1,
             "tg": 0,
-            "iv": 4,
+            "iv": 5,
             "sp": 2.5,
             "hn": 1.25,
             "tr": 1.5
@@ -1645,7 +1624,7 @@
             "tw": 3,
             "ta": 3,
             "tg": 3,
-            "iv": 4,
+            "iv": 5,
             "sp": 2.5,
             "hn": 3,
             "tr": 3.5
@@ -1677,31 +1656,6 @@
         },
         {
             "names": [
-                "Leaf Tires"
-            ],
-            "images": [
-                "https://mario.wiki.gallery/images/thumb/f/f9/Leaf_Tires_MK8.png/100px-Leaf_Tires_MK8.png"
-            ],
-            "wg": 0,
-            "ac": 5,
-            "on": 1,
-            "of": 3,
-            "mt": 5,
-            "sl": 1,
-            "sw": 2,
-            "sa": 2,
-            "sg": 2,
-            "tl": 3,
-            "tw": 3,
-            "ta": 4,
-            "tg": 2,
-            "iv": 5,
-            "sp": 1.75,
-            "hn": 3,
-            "tr": 2
-        },
-        {
-            "names": [
                 "Ancient Tires"
             ],
             "images": [
@@ -1720,7 +1674,7 @@
             "tw": 1,
             "ta": 0,
             "tg": 1,
-            "iv": 1,
+            "iv": 5,
             "sp": 2,
             "hn": 0.5,
             "tr": 5
