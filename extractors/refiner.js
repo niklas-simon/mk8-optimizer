@@ -1588,27 +1588,25 @@ const atvs = [
     "Splat Buggy"
 ];
 
-function getClasses(names) {
-    return names.map(name => {
-        if (bikes.includes(name)) return "bike";
-        if (sports.includes(name)) return "sport";
-        if (atvs.includes(name)) return "atv";
-        return "kart";
-    });
-}
-
 STATS.drivers.forEach(driver => {
     driver.sp = (driver.sl + driver.sw + driver.sa + driver.sg) / 4;
     driver.hn = (driver.tl + driver.tw + driver.ta + driver.tg) / 4;
     driver.tr = (driver.on + driver.of) / 2;
-    driver.class = driver_classes[driver.names[0]];
+    driver.class = driver.names
+        .map(name => driver_classes[name])
+        .find(c => c && c !== "N/A").toLowerCase()
 });
 
 STATS.bodies.forEach(body => {
     body.sp = (body.sl + body.sw + body.sa + body.sg) / 4;
     body.hn = (body.tl + body.tw + body.ta + body.tg) / 4;
     body.tr = (body.on + body.of) / 2;
-    body.classes = getClasses(body.names);
+    body.classes = body.names.map(name => {
+        if (bikes.includes(name)) return "bike";
+        if (sports.includes(name)) return "sport";
+        if (atvs.includes(name)) return "atv";
+        return "kart";
+    });
 });
 
 STATS.tires.forEach(tire => {

@@ -11,7 +11,7 @@
                 "https://mario.wiki.gallery/images/thumb/a/a8/MK8_Ludwig_Icon.png/64px-MK8_Ludwig_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/64px-Mii_MK8.png"
             ],
-            "class": "Medium",
+            "class": "medium",
             "wg": 6,
             "ac": 2,
             "on": 4,
@@ -41,7 +41,7 @@
                 "https://mario.wiki.gallery/images/thumb/d/dd/MK8_Iggy_Icon.png/64px-MK8_Iggy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/0/00/MK8DX_Kamek_Icon.png/64px-MK8DX_Kamek_Icon.png"
             ],
-            "class": "Medium",
+            "class": "medium",
             "wg": 6,
             "ac": 2,
             "on": 5,
@@ -75,6 +75,7 @@
                 "https://mario.wiki.gallery/images/thumb/f/f6/MK8D_Birdo_Icon.png/64px-MK8D_Birdo_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/f/fd/MK8DX_Peachette_Icon.png/64px-MK8DX_Peachette_Icon.png"
             ],
+            "class": "medium",
             "wg": 4,
             "ac": 3,
             "on": 3,
@@ -104,7 +105,7 @@
                 "https://mario.wiki.gallery/images/thumb/7/7f/MK8_ShyGuy_Icon.png/64px-MK8_ShyGuy_Icon.png",
                 "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Larry_Icon.png/64px-MK8_Larry_Icon.png"
             ],
-            "class": "Light",
+            "class": "light",
             "wg": 3,
             "ac": 4,
             "on": 3,
@@ -151,7 +152,7 @@
             "sp": 3,
             "hn": 7,
             "tr": 3,
-            "class": "Light"
+            "class": "light"
         },
         {
             "names": [
@@ -181,7 +182,7 @@
             "sp": 3,
             "hn": 8,
             "tr": 3,
-            "class": "Light"
+            "class": "light"
         },
         {
             "names": [
@@ -209,7 +210,7 @@
             "sp": 10,
             "hn": 0,
             "tr": 3,
-            "class": "Heavy"
+            "class": "heavy"
         },
         {
             "names": [
@@ -241,7 +242,7 @@
             "sp": 9,
             "hn": 2,
             "tr": 5,
-            "class": "Heavy"
+            "class": "heavy"
         },
         {
             "names": [
@@ -271,7 +272,7 @@
             "sp": 10,
             "hn": 1,
             "tr": 3,
-            "class": "Heavy"
+            "class": "heavy"
         },
         {
             "names": [
@@ -305,7 +306,7 @@
             "sp": 8,
             "hn": 3,
             "tr": 6,
-            "class": "Heavy"
+            "class": "heavy"
         },
         {
             "names": [
@@ -335,7 +336,7 @@
             "sp": 8,
             "hn": 3,
             "tr": 4.5,
-            "class": "Heavy"
+            "class": "heavy"
         },
         {
             "names": [
@@ -365,7 +366,7 @@
             "sp": 2,
             "hn": 8,
             "tr": 3,
-            "class": "Light"
+            "class": "light"
         },
         {
             "names": [
@@ -393,7 +394,7 @@
             "sp": 1,
             "hn": 10,
             "tr": 4,
-            "class": "Light"
+            "class": "light"
         },
         {
             "names": [
@@ -421,7 +422,7 @@
             "sp": 1,
             "hn": 9,
             "tr": 3.5,
-            "class": "Light"
+            "class": "light"
         },
         {
             "names": [
@@ -451,7 +452,7 @@
             "sp": 6,
             "hn": 5,
             "tr": 4,
-            "class": "Medium"
+            "class": "medium"
         },
         {
             "names": [
@@ -483,7 +484,7 @@
             "sp": 5,
             "hn": 6,
             "tr": 2.5,
-            "class": "Medium"
+            "class": "medium"
         },
         {
             "names": [
@@ -509,7 +510,7 @@
             "sp": 8,
             "hn": 3,
             "tr": 4.5,
-            "class": "Heavy"
+            "class": "heavy"
         }
     ],
     "bodies": [
