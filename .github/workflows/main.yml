@@ -1,29 +1,48 @@
+name: Publish Docker image
+
 on:
-  push:
-    branches:
-    - main
-  workflow_dispatch:
+  release:
+    types: [published]
+
 jobs:
-  deploy:
+  push_to_registry:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+      attestations: write
+      id-token: write
     steps:
-    - name: repo checkout
-      uses: actions/checkout@v4
-    - name: node setup
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x
-    - name: install
-      run: |-
-        npm i
-        npm install --global @angular/cli
-    - name: build
-      run: ng build
-    - name: upload
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: 'ftp.pein-gera.de'
-        user: 'root'
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "dist/mk8-builder"
-        remoteDir: "/ftp/root/vhosts/mk8builder.pein-gera.de"
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
+        with:
+          images: gewuerznud3l/mk8-builder
+
+      - name: Build and push Docker image
+        id: push
+        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/arm/v6,linux/amd64
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
