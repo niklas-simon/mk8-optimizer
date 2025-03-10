@@ -1,28 +1,41 @@
-### STAGE 1:BUILD ###
-# Defining a node image to be used as giving it an alias of "build"
-# Which version of Node image to use depends on project dependencies 
-# This is needed to build and compile our code 
-# while generating the docker image
-FROM --platform=$BUILDPLATFORM node:22-alpine3.21 AS build
-# Create a Virtual directory inside the docker image
-WORKDIR /dist/src/mk8-builder
-# Copy files to virtual directory
-# COPY package.json package-lock.json ./
-# Run command in Virtual directory
-RUN npm cache clean --force
-# Copy files from local machine to virtual directory in docker image
-COPY . .
-RUN npm install
-RUN npm run build --prod
+FROM --platform=$BUILDPLATFORM node:20-alpine AS base
 
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install -g corepack@latest && corepack enable
 
-### STAGE 2:RUN ###
-# Defining nginx image to be used
-FROM nginx:stable-alpine3.20-perl AS ngi
-# Copying compiled code and nginx config to different folder
-# NOTE: This path may change according to your project's output folder 
-COPY --from=build /dist/src/mk8-builder/dist/mk8-builder /usr/share/nginx/html
-COPY /nginx.conf  /etc/nginx/conf.d/default.conf
-# Exposing a port, here it means that inside the container 
-# the app will be using Port 80 while running
-EXPOSE 80
+WORKDIR /app
+
+FROM base AS build
+COPY . /app
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN pnpm build
+
+FROM base AS prod-deps
+COPY package.json /app
+COPY pnpm-lock.yaml /app
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+
+FROM --platform=linux/arm64 arm64v8/node:20-alpine AS build-arm64
+FROM --platform=linux/amd64 node:20-alpine AS build-amd64
+FROM build-$TARGETARCH AS system-deps
+
+WORKDIR /app
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install -g corepack@latest && corepack enable
+
+FROM system-deps
+COPY --from=prod-deps /app/node_modules /app/node_modules
+COPY --from=build /app/.next /app/.next
+COPY --from=build /app/package.json /app
+COPY --from=build /app/public /app/public
+COPY --from=build /app/node_modules /app/node_modules
+
+ENV NODE_ENV=production
+
+HEALTHCHECK --interval=10s --timeout=5s --start-period=5s --retries=3 CMD wget -qO - http://localhost:3000/health
+
+EXPOSE 3000
+CMD [ "sh", "-c", "pnpm start" ]

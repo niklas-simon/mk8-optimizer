@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mk8-optimizer
+spec:
+  ports:
+  - port: 3000
+  selector:
+    app: mk8-optimizer
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mk8-optimizer
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: mk8.pein-gera.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mk8-optimizer
+                port:
+                  number: 3000
+  tls:
+    - hosts:
+        - mk8.pein-gera.de
+      secretName: mk8-pein-gera-de-tls
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mk8-optimizer
+spec:
+  selector:
+    matchLabels:
+      app: mk8-optimizer
+  template:
+    metadata:
+      labels:
+        app: mk8-optimizer
+    spec:
+      containers:
+      - image: gewuerznud3l/mk8-optimizer:latest
+        name: mk8-optimizer
+        imagePullPolicy: Always
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: node.kubernetes.io/instance-type # all nodes should have 'k3s'
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+          matchExpressions:
+          - key: app
+            operator: Exists

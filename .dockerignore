@@ -1,8 +1,12 @@
+.dockerignore
+
+# Not needed as we are bundling the whole app
+node_modules
+.next
 .git
-.editorconfig
-/.vscode/*
-/node_modules
-/e2e
-/docs
+.env
+.vscode
 .gitignore
-*.zip
+docker-compose.yml
+Dockerfile
+README.md
